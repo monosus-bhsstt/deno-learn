@@ -2,14 +2,14 @@
 import { serve } from "https://deno.land/std@0.139.0/http/server.ts";
 import { h, ssr } from "https://crux.land/nanossr@0.0.4";
 import { Client } from "https://deno.land/x/postgres@v0.15.0/mod.ts";
-import { config } from "https://deno.land/x/dotenv/mod.ts";
+// import { config } from "https://deno.land/x/dotenv/mod.ts";
 
-const ENV = config();
+// const ENV = config();
 const client = new Client({
   user: "postgres",
   database: "postgres",
-  hostname: ENV.host,
-  password: ENV.pw,
+  hostname: host,
+  password: pw,
   port: "5432",
 });
 
