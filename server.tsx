@@ -8,8 +8,8 @@ import { Client } from "https://deno.land/x/postgres@v0.15.0/mod.ts";
 const client = new Client({
   user: "postgres",
   database: "postgres",
-  hostname: host,
-  password: pw,
+  hostname: Deno.env.host,
+  password: Deno.env.pw,
   port: "5432",
 });
 
